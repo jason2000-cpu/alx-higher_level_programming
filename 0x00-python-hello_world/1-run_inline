@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -c "$PYCODE"
+echo -C "$PYCODE"
