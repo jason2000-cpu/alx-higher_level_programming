@@ -2,14 +2,17 @@
 
 if __name__ == "__main__":
     from sys import argv
-    if len(argv) <= 1:
+    
+    argc = len(argv) - 1
+    print(argc)
+    if argc == 0:
         print("0 arguments.")
 
-    elif len(argv) > 1:
-        print(f"{len(argv)-1} arguments:")
+    elif argc > 1:
+        print(f"{argc-1} arguments:")
 
     else:
-        print(f"{len(argv)} argument:")
-    for i in range(len(argv)-1):
+        print(f"{argc} argument:")
+    for i in range(argc-1):
         i += 1
         print(f"{i}: {argv[i]}")
