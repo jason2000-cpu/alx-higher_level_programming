@@ -6,6 +6,12 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     if type(tuple_b) is int:
         tuple_b = (tuple_b, 0)
+    
+    if not tuple_a:
+        tuple_a = (0, 0)
+
+    if not tuple_b:
+        tuple_b = (0,0)
 
     tupleList = []
     for i in range(2):
