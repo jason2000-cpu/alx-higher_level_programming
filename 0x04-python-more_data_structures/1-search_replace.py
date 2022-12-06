@@ -7,4 +7,3 @@ def search_replace(my_list, search, replace):
             my_list_cpy[i] = 89
 
     return my_list_cpy
-
