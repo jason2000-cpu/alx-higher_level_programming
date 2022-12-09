@@ -11,4 +11,4 @@ def weight_average(my_list=[]):
 
         summation = summation + mul
 
-    return summation/divident
+    return float(summation/divident)
