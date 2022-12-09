@@ -3,10 +3,12 @@
 def weight_average(my_list=[]):
     summation = 0
     divident = 0
-    for i in my_list:
-        multiply = i[0] * i[1]
-        divident += i[1]
-        summation += multiply
-        print(multiply)
+    for i in range(len(my_list)):
+        mul = 1
+        divident += my_list[i][len(my_list[i])-1]
+        for j in my_list[i]:
+            mul = mul * j
+
+        summation = summation + mul
 
     return summation/divident
