@@ -2,7 +2,7 @@
 
 Exceptions are errors detected during execution and are not unconditionally fatal:
 #### Examples include;
-- ZeroDivisionalError (dividing by zero)
+- ZeroDivisionError (dividing by zero)
 - TypeError (inappropriate data type)
 - IndexError (index out of range)
 - NameError (occurs when you try to use a variable, function, or module that doesn't exist or wasn't used in a valid way)
