@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defining a class tha inherits from base class BaseGeometry"""
+"""Defines a class Rectangle that inherits from BaseGeometry."""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
@@ -18,17 +18,11 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        """Return the area"""
+        """Return the area of the rectangle."""
         return self.__width * self.__height
 
     def __str__(self):
-        """Return print() and str() representation of a Rectangle."""
+        """Return the print() and str() representation of a Rectangle."""
         string = "[" + str(self.__class__.__name__) + "] "
         string += str(self.__width) + "/" + str(self.__height)
         return string
-
-
-r = Rectangle(3, 5)
-
-print(r)
-print(r.area())
