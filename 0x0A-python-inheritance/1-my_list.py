@@ -1,14 +1,17 @@
 #!/usr/bin/python3
+"""This class inherits from class list and sorts a list in descending order"""
+
 
 class MyList(list):
+    """Initializing class MyList"""
     def __init__(self):
         pass
-    
+    """A method to sort the list tuple. It returns a sorted list"""
     def print_sorted(self, list):
+        """ Try catch block to try for a non int value"""
         try:
             for i in range(len(list)):
                 for j in range(len(list)):
-            
                     if list[i] < list[j]:
                         temp = list[i]
                         list[i] = list[j]
@@ -17,18 +20,3 @@ class MyList(list):
             print("Not an int Tuple")
 
         return list
-        
-        
-        
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-
-print(my_list)
-my_list.print_sorted(my_list)
-print(my_list)
-# list = [1, 0, 4, 3, 7, 12, 6]
-# print(inst1.print_sorted(list))
