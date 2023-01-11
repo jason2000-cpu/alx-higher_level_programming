@@ -26,3 +26,9 @@ class Rectangle(BaseGeometry):
         string = "[" + str(self.__class__.__name__) + "] "
         string += str(self.__width) + "/" + str(self.__height)
         return string
+
+
+r = Rectangle(3, 5)
+
+print(r)
+print(r.area())
