@@ -1,6 +1,2 @@
--- Lists the number of records with the same score in the table second_table in my MySQL server.
--- Records are ordered by descending count.
-SELECT score, COUNT(*) AS number
-FROM second_table
-GROUP BY score
-ORDER BY number DESC;
+--  Script to compute the score average of all the records in 'second_table'
+SELECT AVG(score) as average FROM second_table;
