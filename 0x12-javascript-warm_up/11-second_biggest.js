@@ -1,17 +1,20 @@
 #!/usr/bin/node
 
-let arr = process.argv.slice(2);
-let newArr = [];
+let biggest = 0;
+let i;
+const arrayNumbers = [];
 
-if (arr.length  <= 1) {
-    console.log(0)
-} else {
-   console.log(arr.splice(arr.indexOf(Math.max(arr)), 1));
-    for (let i = 0; i < arr.length; i++){
-        for (let j = 0; i < 1; j++){
-            console.log(i, ':', j);
-        }
-    }
-   //console.log(newArr[0])
+for (i = 2; i < process.argv.length; i++) {
+  if (Number.isNaN(parseInt(process.argv[i])) === false) {
+    arrayNumbers[i - 2] = parseInt(process.argv[i]);
+  }
 }
 
+if (arrayNumbers.length > 1) {
+  biggest = Math.max.apply(null, arrayNumbers);
+  i = arrayNumbers.indexOf(biggest);
+  arrayNumbers[i] = -Infinity;
+  biggest = Math.max.apply(null, arrayNumbers);
+}
+
+console.log(biggest);
