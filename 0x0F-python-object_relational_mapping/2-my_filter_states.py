@@ -12,8 +12,10 @@ if __name__ == '__main__':
         host='localhost', user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
     cur = db.cursor()
-    # query = "SELECT * FROM states WHERE name = %s"
-    cur.execute("SELECT * FROM states WHERE name = %s", (sys.argv[4],))
+    cur.execute("SELECT * \
+        FROM states \
+        WHERE CONVERT(`name` using Latin1) \
+        COLLATE latin1_General_CS = '{}';".format(sys.argv[4]))
     states = cur.fetchall()
 
     for state in states:
