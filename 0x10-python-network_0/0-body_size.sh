@@ -1,4 +1,3 @@
 #!/bin/bash
-url=$1
-size=$(curl -s -w '\n%{size_download}' $url | tail -n 1)
-echo $size 
+# Script that shows the Content-Length from a HTTP request
+curl -sI "$1" | grep "Content-Length:" | cut -d " " -f 2
